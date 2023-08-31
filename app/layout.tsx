@@ -1,7 +1,7 @@
 import '@/app/styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Header } from './components'
+import { Header, Drawbar } from './components'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,9 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body data-theme="forest" className={inter.className}>
+      <body data-theme="luxury" className={inter.className}>
         <Header />
-        {children}
+        <Drawbar />
+        <div className='pt-18'>
+          {children}
+        </div>
       </body>
     </html>
   )
